@@ -1,5 +1,5 @@
 The forums and Jasmine videos from the course were very helpful for me on this project. 
-You can view the final results here: https://carmahowlett.github.io/Udacity-Feedreader/
+You can view the [final results here](https://carmahowlett.github.io/Udacity-Feedreader/)
 
 # Project Overview
 
