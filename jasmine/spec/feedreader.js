@@ -100,7 +100,7 @@ $(function() {
          */
         it('Has an entry in the feed container', function() {
             //checks if feed container has at least a single entry in it
-            expect($('.feed .entry').length).not.toBe(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
@@ -109,8 +109,8 @@ $(function() {
     describe('New Feed Selection', function() {
         //checks that content changes when newFeed loads
         //checks that newFeed content is not the same as feed
-        var feed;
-        var newFeed;
+        var feed,
+            newFeed;
         beforeEach(function(done) {
             loadFeed(0, function() {
                 feed = $('.feed').html();
