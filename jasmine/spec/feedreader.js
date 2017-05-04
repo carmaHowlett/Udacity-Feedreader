@@ -34,8 +34,8 @@ $(function() {
             allFeeds.forEach(function(feed) {
                 //checks if Url is defined
                 expect(feed.url).toBeDefined();
-                //checks if url is not empty
-                expect(feed.length).not.toBe(0);
+                //checks if url is not empty, explicitly checks the length of the url property
+                expect(feed.url.length).not.toBe(0);
             });
         });
 
@@ -48,8 +48,8 @@ $(function() {
             allFeeds.forEach(function(feed) {
                 //checks if name is defined
                 expect(feed.name).toBeDefined();
-                //checks if name is not empty
-                expect(feed.length).not.toBe('');
+                //checks if name is not empty, explicitly checks the length of the name property
+                expect(feed.name.length).not.toBe('');
             });
         });
     });
@@ -77,11 +77,12 @@ $(function() {
          */
         it('Side Menu toggles visiblity when icon is clicked', function() {
             //checks if menu hides when icon is clicked
+            //we us classList to return an array, className would only return a string
             $('a.menu-icon-link').click();
-            expect(document.body.className).not.toContain('menu-hidden');
+            expect(document.body.classList).not.toContain('menu-hidden');
             //checks if menu displays when icon is clicked again
             $('a.menu-icon-link').click();
-            expect(document.body.className).toContain('menu-hidden');
+            expect(document.body.classList).toContain('menu-hidden');
         });
     });
 
@@ -97,23 +98,24 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        it('Has an entry in the feed container', function(done) {
-            //checks if entry h2 has a single element within in
-            expect($('.entry h2').length).not.toBe([0]);
-            done();
+        it('Has an entry in the feed container', function() {
+            //checks if feed container has at least a single entry in it
+            expect($('.feed .entry').length).not.toBe(0);
         });
     });
 
 
     /* TODO - FINISHED: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
-        var feed0;
-        var feed1;
+        //checks that content changes when newFeed loads
+        //checks that newFeed content is not the same as feed
+        var feed;
+        var newFeed;
         beforeEach(function(done) {
             loadFeed(0, function() {
-                $feed0 = $('.header-title').html();
+                feed = $('.feed').html();
                 loadFeed(1, function() {
-                    $feed1= $('.header-title').html();
+                    newFeed = $('.feed').html();
                     done();
                 });
             });
@@ -123,10 +125,12 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        it('Content actually changes', function(done) {
-            //checks that $feed0 and $feed1 are different
-            expect($feed0).not.toBe($feed1);
-            done();
+        it('Content actually changes', function() {
+            //checks that feed and newFeed are different
+            expect(feed).not.toEqual(newFeed);
+            // checks to make sure the feed loads are different
+            // console.log(feed);
+            // console.log(newFeed)//
         });
     });
 }());

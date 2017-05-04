@@ -1,3 +1,25 @@
+# How to Run the Application:
+
+1. Download the [Feedreader project repository](http://github.com/udacity/frontend-nanodegree-feedreader). zip file or by forking/cloning the repository to your local account.
+2. To run run the application locally, simply open the file named "index.html" in your web browser.
+
+
+## Jasmine Must Pass the Following Tests:
+
+1. allFeeds have a URL defined and the URL is not empty.
+2. allFeeds have a name defined and the name is not empty.
+3. The side menu element is hidden by default.
+4. The side menu changes visibility when the menu icon is clicked.
+5. There is at least a single .entry element within the .feed container.
+6. When a new feed is loaded by the loadFeed function the content actually changes.
+
+
+### Passes the Jasmine 7 specs with 0 failures
+
+[Udacity Feedreader Site demo](https://carmahowlett.github.io/Udacity-Feedreader/)
+This is the final project from section: 5 - Advanced Interactive Websites, from the online Udacity Front-End Web Developer Nanodegree course.
+
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
@@ -44,5 +66,5 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 17. No test should be dependent on the results of another.
 18. Callbacks should be used to ensure that feeds are loaded before they are tested.
 19. Implement error handling for undefined variables and out-of-bound array access.
-20. When complete - all of your tests should pass. 
+20. When complete - all of your tests should pass.
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
