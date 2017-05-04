@@ -1,6 +1,6 @@
 # How to Run the Application:
 
-1. Download the [Feedreader project repository](http://github.com/udacity/frontend-nanodegree-feedreader). zip file or by forking/cloning the repository to your local account.
+1. Download the [Feedreader project repository](http://github.com/udacity/frontend-nanodegree-feedreader) zip file or by forking/cloning the repository to your local account.
 2. To run run the application locally, simply open the file named "index.html" in your web browser.
 
 
@@ -16,7 +16,7 @@
 
 ### Passes the Jasmine 7 specs with 0 failures
 
-[Udacity Feedreader Site demo](https://carmahowlett.github.io/Udacity-Feedreader/)
+[Udacity Feedreader Site demo](https://carmahowlett.github.io/Udacity-Feedreader/).
 This is the final project from section: 5 - Advanced Interactive Websites, from the online Udacity Front-End Web Developer Nanodegree course.
 
 
